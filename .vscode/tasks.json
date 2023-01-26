@@ -1,0 +1,328 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Set umm to be executable",
+      "type": "shell",
+      "command": "chmod",
+      "args": [
+        {
+          "value": "+x",
+          "quoting": "escape"
+        },
+        {
+          "value": "${config:ummBinaryPath}",
+          "quoting": "weak"
+        }
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean library and target folders",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "clean",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Reset project metadata",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "reset",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check health of the project",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check-health",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Update umm executable",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "update",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests for WalletTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "group": "test",
+      "args": [
+        {
+          "value": "test",
+          "quoting": "escape"
+        },
+        {
+          "value": "ConcertTicket.WalletTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run specific test from WalletTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "group": "test",
+      "args": [
+        {
+          "value": "test",
+          "quoting": "escape"
+        },
+        {
+          "value": "ConcertTicket.WalletTest",
+          "quoting": "escape"
+        },
+        {
+          "value": "${input:ConcertTicket.WalletTest}",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check WalletTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "ConcertTicket.WalletTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for WalletTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "ConcertTicket.WalletTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check Wallet",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "ConcertTicket.Wallet",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for Wallet",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "ConcertTicket.Wallet",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check ConcertTicket",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "ConcertTicket.ConcertTicket",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for ConcertTicket",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "ConcertTicket.ConcertTicket",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Grade Assignment",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "grade",
+          "quoting": "escape"
+        },
+        {
+          "value": "${input:gradable_assignments}",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": [
+        {
+          "applyTo": "allDocuments",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "owner": "umm",
+          "pattern": {
+            "endLine": 2,
+            "file": 1,
+            "line": 2,
+            "message": 3,
+            "regexp": "\\s*[│]\\s*([\\w./]+)\\s*[│]\\s*([0-9]+)\\s*[│]\\s*([\\w ]+)"
+          }
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "ConcertTicket.WalletTest",
+      "description": "Which test to run?",
+      "options": [
+        "testAdd",
+        "testRemove",
+        "testResize",
+        "testToString",
+        "testGetSize",
+        "testGetLength"
+      ],
+      "default": "testAdd"
+    },
+    {
+      "type": "pickString",
+      "id": "gradable_assignments",
+      "description": "Which assignment are you working on?",
+      "options": [
+        "\"1A. Implementing Array-backed Lists\"",
+        "\"Project: ShoppingList - JavaDoc\"",
+        "\"Project: ShoppingList - Unit Tests\"",
+        "\"11L. Implementing ArrayStack\"",
+        "\"12L. Implementing ArrayQueue\"",
+        "\"14L. Implementing LinkedQueue\"",
+        "\"13L. Implementing LinkedStack\"",
+        "\"2A. Implementing LinkedLists\"",
+        "\"Project: Round Robin Scheduler\"",
+        "\"Project: Pyramid Scheme\"",
+        "\"Project: WorkAheadQueue\"",
+        "\"Lab 8A - Recursion in Trees\"",
+        "\"Sample Assignment\"",
+        "\"4L. Test Driven Development\"",
+        "\"5L. Writing JUnit tests - Part 1\"",
+        "\"6L. Writing Junit tests - Part 2 - Student Class\"",
+        "\"6L. Writing Junit tests - Part 1 - CoOrds Class\""
+      ],
+      "default": "\"1A. Implementing Array-backed Lists\""
+    }
+  ]
+}
