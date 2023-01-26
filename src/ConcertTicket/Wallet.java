@@ -73,24 +73,20 @@ public class Wallet {
      */
     public ConcertTicket remove() {
 
-        // Create a ConcertTicket reference variable (DO NOT create a 
+        // TODO Create a ConcertTicket reference variable (DO NOT create a 
         // new ConcertTicket – JUST create the reference variable)
-        ConcertTicket ticket = null;
 
         if (this.size > 0) {
             // TODO Use the size variable 
             //(which always points at the next empty 
             // slot) to get the last added ConcertTicket from the array:
-            ticket = tickets[size-1];
             
             // TODO Set that array slot to null:
-            tickets[size-1] = null;
             
             // TODO Decrement the size variable:
-            this.size--;
         }
-        // Return the ConcertTicket:
-        return ticket;
+        // TODO Return the ConcertTicket:
+        return null;
     }
 
 }
