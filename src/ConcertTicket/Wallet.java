@@ -54,7 +54,8 @@ public class Wallet {
      * @return the size of the wallet
      */
     public int getSize() {
-        return this.size;
+        // TODO: Implement `getSize()`
+        return 0;
     }
     
      /**
@@ -63,7 +64,8 @@ public class Wallet {
      * @return the size of the wallet
      */
     public int getLength() {
-        return this.tickets.length;
+        // TODO: Implement `getLength()`
+        return 0;
     }
     
      /**
@@ -73,19 +75,19 @@ public class Wallet {
      */
     public ConcertTicket remove() {
 
-        // TODO Create a ConcertTicket reference variable (DO NOT create a 
+        // TODO: Create a ConcertTicket reference variable (DO NOT create a 
         // new ConcertTicket – JUST create the reference variable)
 
         if (this.size > 0) {
-            // TODO Use the size variable 
+            // TODO: Use the size variable 
             //(which always points at the next empty 
             // slot) to get the last added ConcertTicket from the array:
             
-            // TODO Set that array slot to null:
+            // TODO: Set that array slot to null:
             
-            // TODO Decrement the size variable:
+            // TODO: Decrement the size variable:
         }
-        // TODO Return the ConcertTicket:
+        // TODO: Return the ConcertTicket:
         return null;
     }
 

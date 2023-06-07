@@ -168,6 +168,26 @@
       "problemMatcher": []
     },
     {
+      "label": "Run Wallet",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "run",
+          "quoting": "escape"
+        },
+        {
+          "value": "ConcertTicket.Wallet",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
       "label": "Check Wallet",
       "type": "shell",
       "command": "${config:ummBinaryPath}",
@@ -198,6 +218,26 @@
         },
         {
           "value": "ConcertTicket.Wallet",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run ConcertTicket",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "run",
+          "quoting": "escape"
+        },
+        {
+          "value": "ConcertTicket.ConcertTicket",
           "quoting": "escape"
         }
       ],
@@ -304,25 +344,25 @@
       "id": "gradable_assignments",
       "description": "Which assignment are you working on?",
       "options": [
-        "\"1A. Implementing Array-backed Lists\"",
-        "\"Project: ShoppingList - JavaDoc\"",
-        "\"Project: ShoppingList - Unit Tests\"",
-        "\"11L. Implementing ArrayStack\"",
-        "\"12L. Implementing ArrayQueue\"",
-        "\"14L. Implementing LinkedQueue\"",
-        "\"13L. Implementing LinkedStack\"",
-        "\"2A. Implementing LinkedLists\"",
-        "\"Project: Round Robin Scheduler\"",
         "\"Project: Pyramid Scheme\"",
-        "\"Project: WorkAheadQueue\"",
         "\"Lab 8A - Recursion in Trees\"",
         "\"Sample Assignment\"",
         "\"4L. Test Driven Development\"",
+        "\"13L. Implementing Array-backed Lists\"",
+        "\"14L. Implementing ArrayStack\"",
+        "\"15L. Implementing ArrayQueue\"",
+        "\"16L. Implementing LinkedLists\"",
+        "\"Extra Credit: ShoppingList\"",
+        "\"Extra Credit: WorkAheadQueue\"",
+        "\"17L. Implementing LinkedStack\"",
+        "\"8L. Writing Junit tests - Part 2 - Student Class\"",
+        "\"8L. Writing Junit tests - Part 2 - CoOrds Class\"",
         "\"5L. Writing JUnit tests - Part 1\"",
-        "\"6L. Writing Junit tests - Part 2 - Student Class\"",
-        "\"6L. Writing Junit tests - Part 1 - CoOrds Class\""
+        "\"Project: Round Robin Scheduler\"",
+        "\"Project: ShoppingList - Unit Tests\"",
+        "\"18L. Implementing LinkedQueue\""
       ],
-      "default": "\"1A. Implementing Array-backed Lists\""
+      "default": "\"Project: Pyramid Scheme\""
     }
   ]
 }
